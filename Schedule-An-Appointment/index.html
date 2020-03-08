@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Schedule an appointment</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<!--===============================================================================================-->
+</head>
+
+<body>
+
+
+	<div class="container-contact100">
+
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form" name="submit-to-google-sheet">
+				<span class="contact100-form-title">
+					Schedule an appointment
+				</span>
+				<div class="wrap-input100">
+					<div class="wrap-contact3-form-radio">
+						<p class="p-l-20 p-t-10  request_type-title">Type of appointment *</p>
+						<div class="contact3-form-radio p-l-20">
+							<input class="input-radio3" id="radio1" type="radio" name="Request_Type"
+								value="Studio session">
+							<label class="label-radio3 request_type-label" for="radio1">
+								Studio session
+							</label>
+						</div>
+						<div class="contact3-form-radio p-l-20">
+							<input class="input-radio3" id="radio2" type="radio" name="Request_Type" value="Podcast">
+							<label class="label-radio3 request_type-label" for="radio2">
+								Podcast
+							</label>
+						</div>
+						<div class="contact3-form-radio p-l-20">
+							<input class="input-radio3" id="radio2" type="radio" name="Request_Type" value="Other">
+							<label class="label-radio3 request_type-label" for="radio2">
+								Other
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="wrap-input100 validate-input" data-validate="Please enter your name">
+					<input class="input100" type="text" name="Name" id="Name" placeholder="Name">
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 validate-input" data-validate="Please enter your email: e@a.x">
+					<input class="input100" type="text" name="Email" placeholder="E-mail">
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 validate-input" data-validate="Please enter date">
+					<input class="input100" type="text" name="Date" id="Date" placeholder="Select Date" onfocus="(this.type='date')" onblur="(this.value == '' ? this.type='text' : this.type='date')">
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 p-l-20">
+					<div class="wrap-contact3-form-check">
+						<p class="time-selection-title">Time Selection *</p>
+						<div class="row">
+							<div class="contact3-form-check col-md-4">
+								<input class="input-checkbox" id="checkbox" type="checkbox" name="11am" value="11 am">
+								<label class="label-check time-selection-label" for="checkbox">
+									11 AM
+								</label>
+							</div>
+							<div class="contact3-form-check col-md-4">
+								<input class="input-checkbox" id="checkbox" type="checkbox" name="12am" value="12 pm">
+								<label class="label-check time-selection-label" for="checkbox">
+									12 PM
+								</label>
+							</div>
+							<div class="contact3-form-check col-md-4">
+								<input class="input-checkbox" id="checkbox" type="checkbox" name="1pm" value="1 pm">
+								<label class="label-check time-selection-label" for="checkbox">
+									1 PM
+								</label>
+							</div>
+							<div class="contact3-form-check col-md-4">
+								<input class="input-checkbox" id="checkbox" type="checkbox" name="2pm" value="2 pm">
+								<label class="label-check time-selection-label" for="checkbox">
+									2 PM
+								</label>
+							</div>
+							<div class="contact3-form-check col-md-4">
+								<input class="input-checkbox" id="checkbox" type="checkbox" name="3pm" value="3 pm">
+								<label class="label-check time-selection-label" for="checkbox">
+									3 PM
+								</label>
+							</div>
+							<div class="contact3-form-check col-md-4">
+								<input class="input-checkbox" id="checkbox" type="checkbox" name="4pm" value="4 pm">
+								<label class="label-check time-selection-label" for="checkbox">
+									4 PM
+								</label>
+							</div>
+							<div class="contact3-form-check col-md-4">
+								<input class="input-checkbox" id="checkbox" type="checkbox" name="5pm" value="5 pm">
+								<label class="label-check time-selection-label" for="checkbox">
+									5 PM
+								</label>
+							</div>
+							<div class="contact3-form-check col-md-4">
+								<input class="input-checkbox" id="checkbox" type="checkbox" name="6pm" value="6 pm">
+								<label class="label-check time-selection-label" for="checkbox">
+									6 PM
+								</label>
+							</div>
+							<div class="contact3-form-check col-md-4">
+								<input class="input-checkbox" id="checkbox" type="checkbox" name="7pm" value="7 pm">
+								<label class="label-check time-selection-label" for="checkbox">
+									7 PM
+								</label>
+							</div>
+							<div class="contact3-form-check col-md-4">
+								<input class="input-checkbox" id="checkbox" type="checkbox" name="8pm" value="8 pm">
+								<label class="label-check time-selection-label" for="checkbox">
+									8 PM
+								</label>
+							</div>
+							<div class="contact3-form-check col-md-4">
+								<input class="input-checkbox" id="checkbox" type="checkbox" name="9pm" value="9 pm">
+								<label class="label-check time-selection-label" for="checkbox">
+									9 PM
+								</label>
+							</div>
+							<div class="contact3-form-check col-md-4">
+								<input class="input-checkbox" id="checkbox" type="checkbox" name="10pm" value="10 pm">
+								<label class="label-check time-selection-label" for="checkbox">
+									10 PM
+								</label>
+							</div>
+							<div class="contact3-form-check col-md-4">
+								<input class="input-checkbox" id="checkbox" type="checkbox" name="11pm" value="11 pm">
+								<label class="label-check time-selection-label" for="checkbox">
+									11 PM
+								</label>
+							</div>
+							<div class="contact3-form-check col-md-4">
+								<input class="input-checkbox" id="checkbox" type="checkbox" name="12am" value="12 am">
+								<label class="label-check time-selection-label" for="checkbox">
+									12 AM
+								</label>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="wrap-input100 validate-input" data-validate="Please enter your message">
+					<textarea class="input100" name="Message" id="Message" placeholder="Your Message"></textarea>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="container-contact100-form-btn">
+					<input type="hidden" name="Time" id="Time">
+					<input type="hidden" name="Status" value="Select">
+					<input type="hidden" name="Confirm" value="">
+					<button class="contact100-form-btn" type="submit">
+						<span>
+							<i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
+							Send
+						</span>
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+
+
+	<div id="dropDownSelect1"></div>
+
+	<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+	<!--===============================================================================================-->
+	<script src="js/sweetalert2.js"></script>
+	<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'UA-23581568-13');
+
+		// Contact form submission start
+
+		const scriptURL = 'https://script.google.com/macros/s/AKfycbwp9wk-aa6teVle9p1hunu7QvoKxyo2WDoudT4YZcpY74kexNuI/exec';
+		const form = document.forms['submit-to-google-sheet']
+
+		form.addEventListener('submit', e => {
+			e.preventDefault()
+			var requestType = document.querySelector("input[name=Request_Type]:checked").value;
+			var name = document.getElementById("Name").value;
+			var date = document.getElementById("Date").value;
+			const timeArray = Array
+				.from(document.querySelectorAll('input[type="checkbox"]'))
+				.filter((checkbox) => checkbox.checked)
+				.map((checkbox) => checkbox.value);
+			var time = timeArray.toString();
+			document.getElementById("Time").value = time;
+			var message = document.getElementById("Message").value;
+
+			if (name !== "" && date !== "" && message !== "" && time !== "" && requestType !== "") {
+				fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+					.then(response => {
+						Swal.fire(
+							'Form submitted successfully!',
+							'Thank You!',
+							'success'
+						)
+						form.reset();
+					})
+					.catch(error => {
+						Swal.fire(
+							'Something went wrong!',
+							'Plesase try again!',
+							'error'
+						)
+					})
+			}
+
+		})
+  // Contact form submission end
+
+	</script>
+
+
+
+
+</body>
+
+</html>

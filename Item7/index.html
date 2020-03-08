@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <title>Survey @Item7</title>
+</head>
+
+<body>
+    <h1 class="bg-info text-white text-center p-2 fixed-top">Survey @Item7</h1>
+
+    <main class="content" role="content">
+        <div id="loader"></div>
+        <section id="section1">
+            <div class="container-fluid col-md-8 col-md-offset-3">
+                <!-- MultiStep Form -->
+                <form id="regForm" name="submit-to-google-sheet" onsubmit="onSubmitFunction()">
+                    <div class="tab">
+                        <div class="control-group">
+                            <h3>Which of the following categories best describes your employment status?</h3>
+                            <label class="control control--radio">Student: The Nottingham University
+                                <input type="radio"
+                                    name="Which_of_the_following_categories_best_describes_your_employment_status?"
+                                    value="Student: The Nottingham University" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Student: Other
+                                <input type="radio"
+                                    name="Which_of_the_following_categories_best_describes_your_employment_status?"
+                                    value="Student: Other" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Employed : The Nottingham University
+                                <input type="radio"
+                                    name="Which_of_the_following_categories_best_describes_your_employment_status?"
+                                    value="Employed : The Nottingham University" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            </label>
+                            <label class="control control--radio">Employed: Contractor
+                                <input type="radio"
+                                    name="Which_of_the_following_categories_best_describes_your_employment_status?"
+                                    value="Employed: Contractor" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            </label>
+                            <label class="control control--radio">Employed: Other
+                                <input type="radio"
+                                    name="Which_of_the_following_categories_best_describes_your_employment_status?"
+                                    value="Employed: Other" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Other
+                                <input type="radio"
+                                    name="Which_of_the_following_categories_best_describes_your_employment_status?"
+                                    value="Other" />
+                                <div class="control__indicator"></div>
+                            </label>
+                        </div>
+                        <div class="control-group">
+                            <h3>What is your gender?</h3>
+                            <label class="control control--radio">Female
+                                <input type="radio" name="What_is_your_gender?" value="Female" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Male
+                                <input type="radio" name="What_is_your_gender?" value="Male" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Other
+                                <input type="radio" name="What_is_your_gender?" value="Other" />
+                                <div class="control__indicator"></div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <div class="control-group">
+                            <h3>What is your ethnicity? (Please select all that apply.)</h3>
+                            <label class="control control--radio">American Indian or Alaskan Native
+                                <input type="checkbox" name="What_is_your_ethnicity"
+                                    value="American Indian or Alaskan Native" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Asian or Pacific Islander
+                                <input type="checkbox" name="What_is_your_ethnicity"
+                                    value="Asian or Pacific Islander" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Black or African American
+                                <input type="checkbox" name="What_is_your_ethnicity"
+                                    value="Black or African American" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Hispanic or Latino
+                                <input type="checkbox" name="What_is_your_ethnicity"
+                                 value="Hispanic or Latino" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">White / Caucasian
+                                <input type="checkbox" name="What_is_your_ethnicity"
+                                 value="White / Caucasian" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Prefer not to answer
+                                <input type="checkbox" name="What_is_your_ethnicity"
+                                 value="Prefer not to answer" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Other
+                                <input type="checkbox" name="What_is_your_ethnicity"
+                                 value="Other" />
+                                <div class="control__indicator"></div>
+                            </label>
+                        </div>
+                        <div class="control-group">
+                            <h3>Please select your age group?</h3>
+                            <label class="control control--radio">Under 18
+                                <input type="radio" name="Please_select_your_age_group?" value="Under 18" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">18-24
+                                <input type="radio" name="Please_select_your_age_group?" value="18-24" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">25-34
+                                <input type="radio" name="Please_select_your_age_group?" value="25-34" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            </label>
+                            <label class="control control--radio">35-44
+                                <input type="radio" name="Please_select_your_age_group?" value="35-44" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            </label>
+                            <label class="control control--radio">45-54
+                                <input type="radio" name="Please_select_your_age_group?" value="45-54" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">55-64
+                                <input type="radio" name="Please_select_your_age_group?" value="55-64" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">65+
+                                <input type="radio" name="Please_select_your_age_group?" value="65+" />
+                                <div class="control__indicator"></div>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="tab">
+                        <div class="control-group">
+                            <h3>How long have you been a customer of Item7?</h3>
+                            <label class="control control--radio">Less than six months
+                                <input type="radio" name="How_long_have_you_been_a_customer_of_Item7?"
+                                    value="Less than six months" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Six months to a year
+                                <input type="radio" name="How_long_have_you_been_a_customer_of_Item7?"
+                                    value="Six months to a year" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">1-2 years
+                                <input type="radio" name="How_long_have_you_been_a_customer_of_Item7?"
+                                    value="1-2 years" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">3 or more years
+                                <input type="radio" name="How_long_have_you_been_a_customer_of_Item7?"
+                                    value="3 or more years" />
+                                <div class="control__indicator"></div>
+                            </label>
+                        </div>
+                        <div class="control-group">
+                            <h3>How likely is it that you would recommend Item7 to a friend or colleague?</h3>
+                            <div class="radio-toolbar">
+                                <div>
+                                    <spam>Not at all likely</spam>
+                                    <spam style="float: right;">Extremely likely</spam>
+                                </div>
+                                <div style="display: grid; grid-template-columns: repeat(11, 1fr);grid-template-columns: repeat( auto-fit, minmax(50px, 1fr) );">
+                                    <input type="radio" id="radio0"
+                                    name="How_likely_is_it_that_you_would_recommend_Item7_to_a_friend_or_colleague?"
+                                    value="0">
+                                <label for="radio0">0</label>
+                                <input type="radio" id="radio1"
+                                    name="How_likely_is_it_that_you_would_recommend_Item7_to_a_friend_or_colleague?"
+                                    value="1">
+                                <label for="radio1">1</label>
+
+                                <input type="radio" id="radio2"
+                                    name="How_likely_is_it_that_you_would_recommend_Item7_to_a_friend_or_colleague?"
+                                    value="2">
+                                <label for="radio2">2</label>
+
+                                <input type="radio" id="radio3"
+                                    name="How_likely_is_it_that_you_would_recommend_Item7_to_a_friend_or_colleague?"
+                                    value="3">
+                                <label for="radio3">3</label>
+
+                                <input type="radio" id="radio4"
+                                    name="How_likely_is_it_that_you_would_recommend_Item7_to_a_friend_or_colleague?"
+                                    value="4">
+                                <label for="radio4">4</label>
+
+                                <input type="radio" id="radio5"
+                                    name="How_likely_is_it_that_you_would_recommend_Item7_to_a_friend_or_colleague?"
+                                    value="5">
+                                <label for="radio5">5</label>
+
+                                <input type="radio" id="radio6"
+                                    name="How_likely_is_it_that_you_would_recommend_Item7_to_a_friend_or_colleague?"
+                                    value="6">
+                                <label for="radio6">6</label>
+
+                                <input type="radio" id="radio7"
+                                    name="How_likely_is_it_that_you_would_recommend_Item7_to_a_friend_or_colleague?"
+                                    value="7">
+                                <label for="radio7">7</label>
+
+                                <input type="radio" id="radio8"
+                                    name="How_likely_is_it_that_you_would_recommend_Item7_to_a_friend_or_colleague?"
+                                    value="8">
+                                <label for="radio8">8</label>
+
+                                <input type="radio" id="radio9"
+                                    name="How_likely_is_it_that_you_would_recommend_Item7_to_a_friend_or_colleague?"
+                                    value="9">
+                                <label for="radio9">9</label>
+
+                                <input type="radio" id="radio10"
+                                    name="How_likely_is_it_that_you_would_recommend_Item7_to_a_friend_or_colleague?"
+                                    value="10">
+                                <label for="radio10">10</label>
+                                </div>
+                            </div>
+                            <p>&nbsp;</p>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <div class="form-group">
+                            <h3>How often do you eat at Item7?</h3>
+                            <label class="control control--radio">Every day
+                                <input type="radio" name="How_often_do_you_eat_at_Item7?"
+                                    value="Every day" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">A few times a week
+                                <input type="radio" name="How_often_do_you_eat_at_Item7?"
+                                    value="A few times a week" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">A few times a month
+                                <input type="radio" name="How_often_do_you_eat_at_Item7?"
+                                    value="A few times a month" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Less than a few times a month
+                                <input type="radio" name="How_often_do_you_eat_at_Item7?"
+                                    value="Less than a few times a month" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Never
+                                <input type="radio" name="How_often_do_you_eat_at_Item7?"
+                                    value="Never" />
+                                <div class="control__indicator"></div>
+                            </label>
+                        </div>
+                        <div class="control-group">
+                            <h3>How do you pay for your meal?</h3>
+                            <label class="control control--radio">Meal Card
+                                <input type="radio" name="How_do_you_pay_for_your_meal?" value="Meal Card" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Card
+                                <input type="radio" name="How_do_you_pay_for_your_meal?" value="Card" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Cash
+                                <input type="radio" name="How_do_you_pay_for_your_meal?" value="Cash" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Voucher
+                                <input type="radio" name="How_do_you_pay_for_your_meal?" value="Voucher" />
+                                <div class="control__indicator"></div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <div class="control-group">
+                            <h3>Which off the meals below is your favourite at Item7?</h3>
+                            <label class="control control--radio">i-7 -Jollof Rice, Plantain, Chicken or Halal Beef  & Spicey Sauce or None Spicey sauce
+                                <input type="radio"
+                                    name="Which_off_the_meals_below_is_your_favourite_at_Item7?"
+                                    value="i-7 -Jollof Rice, Plantain, Chicken or Halal Beef  & Spicey Sauce or None Spicey sauce" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">i-7-Fried Rice, Plantain, Chicken or Halal Beef & Spicey Sauce or None Spicey sauce
+                                <input type="radio"
+                                    name="Which_off_the_meals_below_is_your_favourite_at_Item7?"
+                                    value="i-7-Fried Rice, Plantain, Chicken or Halal Beef & Spicey Sauce or None Spicey sauce" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">i-7-WhiteRice, Plantain, Chicken or Halal Beef & Spicey Sauce or None Spicey sauce
+                                <input type="radio"
+                                    name="Which_off_the_meals_below_is_your_favourite_at_Item7?"
+                                    value="i-7-WhiteRice, Plantain, Chicken or Halal Beef & Spicey Sauce or None Spicey sauce" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">i-7-WhiteRice, Plantain, Green Sauce & Mixed meat
+                                <input type="radio"
+                                    name="Which_off_the_meals_below_is_your_favourite_at_Item7?"
+                                    value="i-7-WhiteRice, Plantain, Green Sauce & Mixed meat" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">I-7 Noodles with chicken or Halal Beef
+                                <input type="radio"
+                                    name="Which_off_the_meals_below_is_your_favourite_at_Item7?"
+                                    value="I-7 Noodles with chicken or Halal Beef" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">i-7 Poundo served with vegetable ( Efo riro or Egusi ) and with Chicken or Halal Beef
+                                <input type="radio"
+                                    name="Which_off_the_meals_below_is_your_favourite_at_Item7?"
+                                    value="i-7 Poundo served with vegetable ( Efo riro or Egusi ) and with Chicken or Halal Beef" />
+                                <div class="control__indicator"></div>
+                            </label>
+                        </div>
+                        <div class="control-group">
+                            <h3>Do you have any additional feedback on the i7 Menu?</h3>
+                            <p><input placeholder="" oninput="this.className = ''"
+                                    name="Do_you_have_any_additional_feedback_on_the_i7_Menu?"></p>
+                        </div>
+
+                        <div class="control-group">
+                            <h3>Is there anything that you think would improve our customer support?</h3>
+                            <p><input placeholder="" oninput="this.className = ''"
+                                    name="Is_there_anything_that_you_think_would_improve_our_customer_support?"></p>
+                        </div>
+                        <div class="control-group">
+                            <h3>Why is Item7 your choice today?</h3>
+                            <label class="control control--radio">Cost:Price is Right
+                                <input type="radio" name="Why_is_Item7_your_choice_today?" value="Cost:Price is Right" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Staff Invite
+                                <input type="radio" name="Why_is_Item7_your_choice_today?"
+                                    value="Staff Invite" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Friends/Collegue  advise
+                                <input type="radio" name="Why_is_Item7_your_choice_today?"
+                                    value="Friends/Collegue  advise" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Attempting new things
+                                <input type="radio" name="Why_is_Item7_your_choice_today?" value="Attempting new things" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Location
+                                <input type="radio" name="Why_is_Item7_your_choice_today?"
+                                    value="Location" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">The usual place 
+                                <input type="radio" name="Why_is_Item7_your_choice_today?"
+                                    value="The usual place" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Other
+                                <input type="radio" name="Why_is_Item7_your_choice_today?"
+                                    value="Other" />
+                                <div class="control__indicator"></div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <div class="control-group">
+                            <h3>Do you think there is enough variety of drinks available?</h3>
+                            <label class="control control--radio">Yes
+                                <input type="radio" name="Do_you_think_there_is_enough_variety_of_drinks_available?"
+                                    value="Yes" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">No
+                                <input type="radio" name="Do_you_think_there_is_enough_variety_of_drinks_available?"
+                                    value="No" />
+                                <div class="control__indicator"></div>
+                            </label>
+                        </div>
+                        <div class="control-group">
+                            <h3>Do you think there is enough variety of food available?</h3>
+                            <label class="control control--radio">Yes
+                                <input type="radio" name="Do_you_think_there_is_enough_variety_of_food_available?"
+                                    value="Yes" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">No
+                                <input type="radio" name="Do_you_think_there_is_enough_variety_of_food_available?"
+                                    value="No" />
+                                <div class="control__indicator"></div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <div class="control-group">
+                            <h3>How likely are you to order an item 7 take away between 6.00pm  and 10.00pm?</h3>
+                            <label class="control control--radio">Extremely likely
+                                <input type="radio" name="How_likely_are_you_to_order_an_item_7_take_away_between_6.00pm__and_10.00pm?"
+                                    value="Extremely likely" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Very likely
+                                <input type="radio" name="How_likely_are_you_to_order_an_item_7_take_away_between_6.00pm__and_10.00pm?"
+                                    value="Very likely" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Somewhat likely
+                                <input type="radio" name="How_likely_are_you_to_order_an_item_7_take_away_between_6.00pm__and_10.00pm?"
+                                    value="Somewhat likely" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Not so likely
+                                <input type="radio" name="How_likely_are_you_to_order_an_item_7_take_away_between_6.00pm__and_10.00pm?"
+                                    value="Not so likely" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Not at all likely
+                                <input type="radio" name="How_likely_are_you_to_order_an_item_7_take_away_between_6.00pm__and_10.00pm?"
+                                    value="Not at all likely" />
+                                <div class="control__indicator"></div>
+                            </label>
+                        </div>
+                        <div class="control-group">
+                            <h3>Do you think the products on sale are clearly displayed?</h3>
+                            <label class="control control--radio">Yes
+                                <input type="radio" name="Do_you_think_the_products_on_sale_are_clearly_displayed?"
+                                    value="Yes" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">No
+                                <input type="radio" name="Do_you_think_the_products_on_sale_are_clearly_displayed?"
+                                    value="No" />
+                                <div class="control__indicator"></div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <div class="control-group">
+                            <h3>Compared to similar stores on the food court, how fair are Item7 prices?</h3>
+                            <label class="control control--radio">Extremely fair
+                                <input type="radio" name="Compared_to_similar_stores_on_the_food_court,_how_fair_are_Item7_prices?"
+                                    value="Extremely fair" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Very fair
+                                <input type="radio" name="Compared_to_similar_stores_on_the_food_court,_how_fair_are_Item7_prices?"
+                                    value="Very fair" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Somewhat fair
+                                <input type="radio" name="Compared_to_similar_stores_on_the_food_court,_how_fair_are_Item7_prices?"
+                                    value="Somewhat fair" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Not so fair
+                                <input type="radio" name="Compared_to_similar_stores_on_the_food_court,_how_fair_are_Item7_prices?"
+                                    value="Not so fair" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Not at all fair
+                                <input type="radio" name="Compared_to_similar_stores_on_the_food_court,_how_fair_are_Item7_prices?"
+                                    value="Not at all fair" />
+                                <div class="control__indicator"></div>
+                            </label>
+                        </div>
+                        <div class="control-group">
+                            <h3>How affordable was the meal at Item7 today?</h3>
+                            <label class="control control--radio">Extremely affordable
+                                <input type="radio" name="How_affordable_was_the_meal_at_Item7_today?"
+                                    value="Extremely affordable" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Very affordable
+                                <input type="radio" name="How_affordable_was_the_meal_at_Item7_today?"
+                                    value="Very affordable" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Moderately affordable
+                                <input type="radio" name="How_affordable_was_the_meal_at_Item7_today?"
+                                    value="Moderately affordable" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Slightly affordable
+                                <input type="radio" name="How_affordable_was_the_meal_at_Item7_today?"
+                                    value="Slightly affordable" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Not at all affordable
+                                <input type="radio" name="How_affordable_was_the_meal_at_Item7_today?"
+                                    value="Not at all affordable" />
+                                <div class="control__indicator"></div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <div class="control-group">
+                            <h3>How would you rate the food quality at Item 7?</h3>
+                            <label class="control control--radio">Excellent
+                                <input type="radio" name="How_would_you_rate_the_food_quality_at_Item_7?"
+                                    value="Excellent" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Very good
+                                <input type="radio" name="How_would_you_rate_the_food_quality_at_Item_7?"
+                                    value="Very good" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Good
+                                <input type="radio" name="How_would_you_rate_the_food_quality_at_Item_7?"
+                                    value="Good" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Fair
+                                <input type="radio" name="How_would_you_rate_the_food_quality_at_Item_7?"
+                                    value="Fair" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Poor
+                                <input type="radio" name="How_would_you_rate_the_food_quality_at_Item_7?"
+                                    value="Poor" />
+                                <div class="control__indicator"></div>
+                            </label>
+                        </div>
+                        <div class="control-group">
+                            <h3>How would you rate the quality of our service?</h3>
+                            <label class="control control--radio">Very high quality
+                                <input type="radio" name="How_would_you_rate_the_quality_of_our_service?"
+                                    value="Very high quality" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">High quality
+                                <input type="radio" name="How_would_you_rate_the_quality_of_our_service?"
+                                    value="High quality" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Neither high nor low quality
+                                <input type="radio" name="How_would_you_rate_the_quality_of_our_service?"
+                                    value="Neither high nor low quality" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Low quality
+                                <input type="radio" name="How_would_you_rate_the_quality_of_our_service?"
+                                    value="Low quality" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Very low quality
+                                <input type="radio" name="How_would_you_rate_the_quality_of_our_service?"
+                                    value="Very low quality" />
+                                <div class="control__indicator"></div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <div class="control-group">
+                            <h3>Overall, how would you rate the service you received from the staff that served you at Item7 today?</h3>
+                            <label class="control control--radio">Excellent
+                                <input type="radio" name="Overall_how_would_you_rate_the_service_you_received_from_the_staff_that_served_you_at_Item7_today?"
+                                    value="Excellent" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Very good
+                                <input type="radio" name="Overall_how_would_you_rate_the_service_you_received_from_the_staff_that_served_you_at_Item7_today?"
+                                    value="Very good" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Good
+                                <input type="radio" name="Overall_how_would_you_rate_the_service_you_received_from_the_staff_that_served_you_at_Item7_today?"
+                                    value="Good" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Fair
+                                <input type="radio" name="Overall_how_would_you_rate_the_service_you_received_from_the_staff_that_served_you_at_Item7_today?"
+                                    value="Fair" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Poor
+                                <input type="radio" name="Overall_how_would_you_rate_the_service_you_received_from_the_staff_that_served_you_at_Item7_today?"
+                                    value="Poor" />
+                                <div class="control__indicator"></div>
+                            </label>
+                        </div>
+                        <div class="control-group">
+                            <h3>What do you think about our opening times,Do you think we START too early, too late, or at about the right time?</h3>
+                            <label class="control control--radio">Much too early
+                                <input type="radio" name="What_do_you_think_about_our_opening_times,Do_you_think_we_START_too_early,_too_late,_or_at_about_the_right_time?"
+                                    value="Much too early" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Too early
+                                <input type="radio" name="What_do_you_think_about_our_opening_times,Do_you_think_we_START_too_early,_too_late,_or_at_about_the_right_time?"
+                                    value="Too early" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">The right time
+                                <input type="radio" name="What_do_you_think_about_our_opening_times,Do_you_think_we_START_too_early,_too_late,_or_at_about_the_right_time?"
+                                    value="The right time" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Too late
+                                <input type="radio" name="What_do_you_think_about_our_opening_times,Do_you_think_we_START_too_early,_too_late,_or_at_about_the_right_time?"
+                                    value="Too late" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">Much too late
+                                <input type="radio" name="What_do_you_think_about_our_opening_times,Do_you_think_we_START_too_early,_too_late,_or_at_about_the_right_time?"
+                                    value="Much too late" />
+                                <div class="control__indicator"></div>
+                            </label>
+                        </div>
+                        <div class="control-group">
+                            <h3>What do you think about our Closing times,Do you think we Close too early or at about the right time?</h3>
+                            <label class="control control--radio">Too early
+                                <input type="radio" name="What_do_you_think_about_our_Closing_times_Do_you_think_we_Close_too_early_or_at_about_the_right_time?"
+                                    value="Too early" />
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">The right time
+                                <input type="radio" name="What_do_you_think_about_our_Closing_times_Do_you_think_we_Close_too_early_or_at_about_the_right_time?"
+                                    value="The right time" />
+                                <div class="control__indicator"></div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="tab">
+                        <div class="control-group">
+                            <h3>Would you like to see Item7 in another location other than the Portland Building?</h3>
+                            <p><input placeholder="" oninput="this.className = ''"
+                                    name="Would_you_like_to_see_Item7_in_another_location_other_than_the_Portland_Building?"></p>
+                        </div>
+                        <div class="control-group">
+                            <h3>In your own words, what are the things that you would most like to improve about Item7?</h3>
+                            <p><input placeholder="" oninput="this.className = ''"
+                                    name="In_your_own_words_what_are_the_things_that_you_would_most_like_to_improve_about_Item7?"></p>
+                        </div>
+                    </div>
+                    <div id="buttons-div" style="overflow:auto;">
+                        <div style="float:right;">
+                            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                            <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                        </div>
+                    </div>
+                    <!-- Circles which indicates the steps of the form: -->
+                    <div id="steps-div" style="text-align:center;margin-top:40px;">
+                        <span class="step"></span>
+                        <span class="step"></span>
+                        <span class="step"></span>
+                        <span class="step"></span>
+                        <span class="step"></span>
+                        <span class="step"></span>
+                        <span class="step"></span>
+                        <span class="step"></span>
+                        <span class="step"></span>
+                        <span class="step"></span>
+                        <span class="step"></span>
+                    </div>
+                    <input type="hidden" name="What_is_your_ethnicity?" id="What_is_your_ethnicity?">
+                </form>
+                <!-- /.MultiStep Form -->
+
+            </div>
+        </section>
+
+    </main> <!-- /content -->
+</body>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.easing.min.js"></script>
+<script src="assets/js/sweetalert2.js"></script>
+<script src="assets/js/main.js"></script>
+
+</html>

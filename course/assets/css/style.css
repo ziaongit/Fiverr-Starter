@@ -1,0 +1,25 @@
+.box001 {
+    float: left;
+    width: 200px;
+    height: auto;
+    margin: 12px;
+    padding: 10px;
+    border: 1px solid black;
+        }
+ img{
+width: 200px;
+height:auto;
+}
+.box002 {
+    float: left;
+    width: 200px;
+    height: auto;
+    margin: 12px;
+    padding: 10px;
+    border: 1px solid white;
+        }
+
+        .box002 img{
+            width: 200px;
+            height:auto;
+            }

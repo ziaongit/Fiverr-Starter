@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <style>
+        .box001 {
+            float: left;
+            width: 75px;
+            height: 15px;
+            margin: 12px;
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        .box002 {
+            float: left;
+            width: 75px;
+            height: 15px;
+            margin: 12px;
+            padding: 10px;
+            border: 1px solid white;
+        }
+    </style>
+    <title>Drop and Drag Game</title>
+</head>
+<body>
+    <p>Score: <text id="score001">0</text></p>
+
+    <div class="box002" ondrop="drop001(event)">
+        <text ondragstart="dragStart001(event)" draggable="true" id="target001">Image 1</text>
+    </div>
+
+    <div class="box002" ondrop="drop002(event)">
+        <text ondragstart="dragStart002(event)" draggable="true" id="target002">Image 2</text>
+    </div>
+
+    <div class="box002" ondrop="drop003(event)">
+        <text ondragstart="dragStart003(event)" draggable="true" id="target003">Image 3</text>
+    </div>
+
+    <div class="box002" ondrop="drop004(event)">
+        <text ondragstart="dragStart004(event)" draggable="true" id="target004">Image 4</text>
+    </div>
+
+    <div class="box002" ondrop="drop005(event)">
+        <text ondragstart="dragStart005(event)" draggable="true" id="target005">Image 5</text>
+    </div>
+    <br /><br /><br /><br />
+
+    <div class="box001" ondrop="drop006(event)" ondragover="allowDrop001(event)" id="place001">Image 1</div>
+
+    <div class="box001" ondrop="drop007(event)" ondragover="allowDrop002(event)" id="place002">Image 2</div>
+
+    <div class="box001" ondrop="drop008(event)" ondragover="allowDrop003(event)" id="place003">Image 3</div>
+
+    <div class="box001" ondrop="drop009(event)" ondragover="allowDrop004(event)" id="place004">Image 4</div>
+
+    <div class="box001" ondrop="drop010(event)" ondragover="allowDrop005(event)" id="place005">Image 5</div><br /><br /><br />
+    
+    <button onclick="submit001()">Submit</button>
+    <p id="message001"></p>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

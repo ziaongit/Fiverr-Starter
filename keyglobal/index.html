@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Contact Form</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<!--===============================================================================================-->
+</head>
+
+<body>
+
+	<style>.forms-studio{position:relative;padding-bottom:56.25%;overflow:hidden;width:100%;height:600px;}.forms-studio iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;}.disclaimer{display: none;}</style><div class='forms-studio'><iframe src='https://script.google.com/macros/s/AKfycbzPCTJkNkXCG5kUas89vC869QP96Blq9R9_G1YodgO0rroWVazz/exec'></iframe></div>
+
+	<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+	<!--===============================================================================================-->
+	<script src="js/sweetalert2.js"></script>
+	<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'UA-23581568-13');
+
+		// Contact form submission start
+
+		const scriptURL = '';
+		const form = document.forms['submit-to-google-sheet']
+
+		form.addEventListener('submit', e => {
+			e.preventDefault()
+			var Email = document.getElementById("Email").value;
+			var Episode_Name = document.getElementById("Episode_Name").value;
+			var Episode_Number = document.getElementById("Episode_Number").value;
+			var Episode_Date = document.getElementById("Episode_Date").value;
+			var Episode_Description = document.getElementById("Episode_Description").value;
+			var Episode_Keywords = document.getElementById("Episode_Keywords").value;
+			var Preferred_Platform = document.querySelector("input[name=Preferred_Platform]:checked").value;
+			var Background_Color = document.querySelector("input[name=Background_Color]:checked").value;
+
+			if (Email !== "" && Episode_Name !== "" && Episode_Number !== "" && Episode_Date !== "" && Episode_Description !== "" && Episode_Keywords !== "" && Preferred_Platform !== "" && Background_Color !== "") {
+				fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+					.then(response => {
+						Swal.fire(
+							'Form submitted successfully!',
+							'Thank You!',
+							'success'
+						)
+						form.reset();
+					})
+					.catch(error => {
+						Swal.fire(
+							'Something went wrong!',
+							'Plesase try again!',
+							'error'
+						)
+					})
+			}
+
+		})
+  // Contact form submission end
+
+	</script>
+
+
+
+</body>
+
+</html>

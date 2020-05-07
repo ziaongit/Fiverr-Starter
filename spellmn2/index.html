@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" >
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="assets/css/style.css">
+      <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+      <link rel="stylesheet" href="assets/css/animate.min.css">
+      <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+      <title>Create / Edit Item</title>
+   </head>
+   <body>
+      <form data-form-validate="true" action="postPage.php" method="post" id="register-form" novalidate="novalidate">
+         <div id="form-content">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-sm-6">
+                     <div class="row">
+                        <div class="col-md-4">
+                           <div class="control-group">
+                              <h5>First Name</h5>
+                              <p>
+                                 <input type="text" data-rule-required="true" data-msg-required="First Name is required" id="firstName" name="firstName"></input>
+                              </p>
+                           </div>
+                        </div>
+                        <div class="col-md-4">
+                           <div class="control-group">
+                              <h5>Middle Name</h5>
+                              <p>
+                                 <input type="text" data-rule-required="true" data-msg-required="Middle Name is required" id="middleName" name="middleName">
+                              </p>
+                           </div>
+                        </div>
+                        <div class="col-md-4">
+                           <div class="control-group">
+                              <h5>Last Name</h5>
+                              <p>
+                                 <input type="text" data-rule-required="true" data-msg-required="Last Name is required" id="lastName" name="lastName">
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-md-6">
+                           <div class="control-group">
+                              <h5>Date of Birth</h5>
+                              <p>
+                                 <input type="date" data-rule-required="true" data-msg-required="Date of Birth is required" id="dateOfBirth" name="dateOfBirth">
+                              </p>
+                           </div>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="control-group">
+                              <h5>Permit Number</h5>
+                              <p>
+                                 <input type="number" data-rule-required="true" data-msg-required="Permit Number is required" id="permitNumber" name="permitNumber">
+                                 <span style="display:none;"><span>
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div  div class="col-md-12">
+                           <div class="control-group">
+                              <h5>Street One</h5>
+                              <p>
+                                 <input type="text" data-rule-required="true" data-msg-required="Street One is required" id="street" name="street1">
+                              </p>
+                           </div>
+                        </div>
+                        <div  div class="col-md-12">
+                           <div class="control-group">
+                              <h5>Street Two</h5>
+                              <p>
+                                 <input type="text" data-rule-required="true" data-msg-required="Street Two is required" id="street2" name="street2">
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div  div class="col-md-4">
+                           <div class="control-group">
+                              <h5>City</h5>
+                              <p>
+                                 <input type="text" data-rule-required="true" data-msg-required="City is required" id="city" name="city">
+                              </p>
+                           </div>
+                        </div>
+                        <div  div class="col-md-4">
+                           <div class="control-group">
+                              <h5>State</h5>
+                              <p>
+                                 <select data-rule-required="true" data-msg-required="State is required" class="element select medium" id="state" name="state">
+                                    <option value="" selected="selected"></option>
+                                    <option value="1" >First option</option>
+                                    <option value="2" >Second option</option>
+                                    <option value="3" >Third option</option>
+                                 </select>
+                              </p>
+                           </div>
+                        </div>
+                        <div  div class="col-md-4">
+                           <div class="control-group">
+                              <h5>Zip Code</h5>
+                              <p>
+                                 <input type="text" data-rule-required="true" data-msg-required="Zip Code is required" id="zip" name="zip">
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-sm-6">
+                     <div class="row">
+                        <div  div class="col-md-4">
+                        <div class="control-group">
+                              <h5>Place of Birth</h5>
+                              <p><input type="text" data-rule-required="true" data-msg-required="Place of Birth is required" id="placeOfBirth" name="placeOfBirth"></p>
+                           </div>
+                        </div>
+                        <div  div class="col-md-4">
+                        <div class="control-group">
+                              <h5>Sex</h5>
+                              <p>
+                                 <select data-rule-required="true" data-msg-required="Sex is required" class="element select medium" id="sex" name="sex">
+                                    <option value="" selected="selected"></option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female"></option>Female</option>
+                                    <option value="Other">Other</option>
+                                 </select>
+                              </p>
+                           </div>
+                        </div>
+                        <div  div class="col-md-4">
+                           <div class="control-group">
+                              <h5>Race</h5>
+                              <p>
+                                 <select data-rule-required="true" data-msg-required="Race is required" class="element select medium" id="race" name="race">
+                                    <option value="" selected="selected"></option>
+                                    <option value="1" >First option</option>
+                                    <option value="2" >Second option</option>
+                                    <option value="3" >Third option</option>
+                                 </select>
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row">
+                     <div class="col-md-4">
+                        <div class="control-group">
+                              <h5>Height</h5>
+                              <p><input type="text" data-rule-required="true" data-msg-required="Height is required" id="height" name="height"></p>
+                           </div>
+                        </div>
+                        <div class="col-md-4">
+                        <div class="control-group">
+                              <h5>Weight</h5>
+                              <p><input type="number" data-rule-required="true" data-msg-required="Weight is required" id="weight" name="weight"></p>
+                           </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                           <div class="control-group">
+                              <h5>Eye Color</h5>
+                              <p>
+                                 <select data-rule-required="true" data-msg-required="Eye Color is required" class="element select medium" id="eyeColor" name="eyeColor">
+                                    <option value="" selected="selected"></option>
+                                    <option value="1" >First option</option>
+                                    <option value="2" >Second option</option>
+                                    <option value="3" >Third option</option>
+                                 </select>
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row">
+                     <div class="col-md-4">
+                           <div class="control-group">
+                              <h5>Hair Color</h5>
+                              <p>
+                                 <select data-rule-required="true" data-msg-required="Hair Color is required" class="element select medium" id="hairColor" name="hairColor">
+                                    <option value="" selected="selected"></option>
+                                    <option value="1" >First option</option>
+                                    <option value="2" >Second option</option>
+                                    <option value="3" >Third option</option>
+                                 </select>
+                              </p>
+                           </div>
+                        </div>
+                        <div class="col-md-4">
+                           <div class="control-group">
+                              <h5>SSN</h5>
+                              <p><input type="text" data-rule-required="true" data-msg-required="SSN is required" id="ssn" name="ssn"></p>
+                           </div>
+                        </div>
+                        <div class="col-md-4">
+                        <div class="control-group">
+                              <h5>Citizenship</h5>
+                              <p>
+                                 <select data-rule-required="true" data-msg-required="Citizenship is required" class="element select medium" id="citizenship" name="citizenship">
+                                    <option value="" selected="selected"></option>
+                                    <option value="1" >First option</option>
+                                    <option value="2" >Second option</option>
+                                    <option value="3" >Third option</option>
+                                 </select>
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="row">
+                     <div class="col-md-4">
+                           <div class="control-group">
+                              <h5>Permit Expiraton</h5>
+                              <p><input type="date" data-rule-required="true" data-msg-required="Permit Expiraton is required" id="permitExpiraton" name="permitExpiraton"></p>
+                           </div>
+                        </div>
+                        <div class="col-md-4">
+                           <div class="control-group">
+                              <h5>Drivers Lic #</h5>
+                              <p><input type="text" data-rule-required="true" data-msg-required="Drivers Lic # is required" id="driversLic#" name="driversLic#"></p>
+                           </div>
+                        </div>
+                        <div class="col-md-4">
+                        <div class="control-group">
+                              <h5>Drivers Lic State</h5>
+                              <p>
+                                 <select data-rule-required="true" data-msg-required="Drivers Lic State is required" class="element select medium" id="driversLicState" name="driversLicState">
+                                    <option value="" selected="selected"></option>
+                                    <option value="1" >First option</option>
+                                    <option value="2" >Second option</option>
+                                    <option value="3" >Third option</option>
+                                 </select>
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row">
+                     <div class="col-md-4">
+                           <div class="control-group">
+                              <h5>Drivers Lic Exp</h5>
+                              <p><input type="date" data-rule-required="true" data-msg-required="Drivers Lic Exp is required" id="driversLicExp" name="driversLicExp"></p>
+                           </div>
+                        </div>
+                        <div class="col-md-4">
+                        <div class="control-group">
+                              <h5>County</h5>
+                              <p>
+                                 <select data-rule-required="true" data-msg-required="County is required" class="element select medium" id="county" name="county">
+                                    <option value="" selected="selected"></option>
+                                    <option value="1" >First option</option>
+                                    <option value="2" >Second option</option>
+                                    <option value="3" >Third option</option>
+                                 </select>
+                              </p>
+                           </div>
+                        </div>
+                        <div class="col-md-4">
+                           <div class="control-group">
+                              <h5>Phone number</h5>
+                              <p><input type="text" data-rule-required="true" data-msg-required="Phone Number is required" id="phoneNumber" name="phoneNumber"></p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row">
+                     <div class="col-md-6">
+                           <div class="control-group">
+                              <h5>Email Address</h5>
+                              <p><input type="email" data-rule-required="true" data-msg-required="Email Address is required" id="emailAddress" name="emailAddress"></p>
+                           </div>
+                        </div>
+                        <div class="col-md-6" style="margin-top: 32px;">
+                           <div class="form-group">
+                              <input class="btn btn-primary" type="submit" name="submit">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </form>
+      <!-- partial -->
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+      <script src='assets/js/jquery.min.js'></script>
+      <script src='https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js'></script>
+      <script src='assets/js/jquery.validate.js'></script>
+      <script src="assets/js/main.js"></script>
+   </body>
+</html>

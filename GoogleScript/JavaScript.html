@@ -1,0 +1,39 @@
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script>
+  // Prevent forms from submitting.
+  function preventFormSubmit() {
+  loadFunction();
+    var forms = document.querySelectorAll('form');
+    for (var i = 0; i < forms.length; i++) {
+      forms[i].addEventListener('submit', function(event) {
+      event.preventDefault();
+      
+      });
+    }
+  }
+  window.addEventListener('load', preventFormSubmit);    
+      
+      
+  function handleFormSubmit(formObject) {
+    google.script.run.processForm(formObject);
+    document.getElementById("myForm").reset();
+  
+    Swal.fire(
+    'Form submitted successfully!',
+    'Ourdiag representative will contact you to discuss your needs.',
+    'success'
+    )
+    
+  }
+  
+  function loadFunction() {
+  var currentdate = new Date(); 
+  var datetime = currentdate.getDate() + "/"
+                + (currentdate.getMonth()+1)  + "/" 
+                + currentdate.getFullYear() + " | "  
+                + currentdate.getHours() + ":"  
+                + currentdate.getMinutes() + ":" 
+                + currentdate.getSeconds();
+    document.getElementById("timestamp").value =datetime;
+}
+</script>

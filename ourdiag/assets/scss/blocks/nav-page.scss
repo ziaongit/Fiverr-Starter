@@ -1,0 +1,37 @@
+.nav-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 19px 0;
+  background-color: #fefefe;
+  z-index: 29;
+  &__logo{
+    display: block;
+  }
+  &__logo-img{
+    width: 113px;
+    height: auto;
+    display: block;
+  }
+  &__firm{
+    font-size: 16px;
+    color: #4C4D4F;
+  }
+  &__request-col{
+    text-align: right;
+  }
+  &__btn-r-info{
+    @media (max-width: 767.98px) {
+      text-align: center;
+      padding-top: 10px;
+    }
+  }
+}
+
+
+
+
+
+
+

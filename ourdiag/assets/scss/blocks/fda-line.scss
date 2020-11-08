@@ -1,0 +1,30 @@
+.fda-line {
+  text-align: center;
+  background: linear-gradient(180deg, #FDB61A 0%, #F7951D 100%);
+  margin-top: 81px;
+  padding: 18px 0;
+  @media (max-width: 767.98px) {
+    margin-top: 107px;
+  }
+  &__link{
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 1;
+    transition: all 0.2s ease-in-out;
+    @media (max-width: 767.98px) {
+      font-size: 16px;
+    }
+    &:hover{
+      color: #FFFFFF;
+      opacity: .8;
+    }
+  }
+}
+
+
+
+
+
+
+

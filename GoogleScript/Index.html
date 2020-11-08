@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <base target="_top">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <?!= include('JavaScript'); ?>
+        
+        <style>
+        label {
+        display: inline-block;
+        margin-bottom: 0px;
+        }
+        .form-group {
+        margin-bottom: 5px;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-8 col-md-8 col-lg-8">
+                    <form id="myForm" onsubmit="handleFormSubmit(this)">
+                    <input type="hidden" name="timestamp" id="timestamp">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="institution">Institution</label>
+                                <input type="text" class="form-control" id="institution" name="institution" placeholder="Your Institution" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="department">Department</label>
+                                <input type="text" class="form-control" id="department" name="department" placeholder="Your Department" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="job_function">Job Function</label>
+                                <input type="text" class="form-control" id="job_function" name="job_function" placeholder="Your Job Function" required>
+                            </div>
+                            <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Your Phone Number" required>
+                            </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="how_can_we_help_you">How can we help you?</label>
+                            <textarea class="form-control" id="how_can_we_help_you" name="how_can_we_help_you" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                    </form>
+                    <div id="output"></div>
+                </div>
+            </div>      
+        </div>
+    </body>
+</html>

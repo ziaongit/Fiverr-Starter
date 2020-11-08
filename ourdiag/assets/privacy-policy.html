@@ -1,0 +1,31 @@
+@@include('template/head.html', {
+"pagetitle": "Home",
+"bodyclass": ""
+})
+
+@@include('template/page-nav.html')
+
+<div class="page-container" id="page-container">
+    @@include('template/fda-line.html')
+    <div class="container" style="min-height: 100vh; padding: 50px 0;">
+        <h1 class="title wow fadeInUp">
+            Data Privacy Policy
+        </h1>
+        <div>
+
+        </div>
+    </div>
+</div>
+
+@@include('template/page-footer.html')
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/plugins.min.js"></script>
+<script src="js/main.min.js"></script>
+<script>
+    $(document).ready(function () {
+        new WOW().init();
+    });
+</script>
+</body>
+</html>

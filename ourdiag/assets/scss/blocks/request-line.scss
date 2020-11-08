@@ -1,0 +1,38 @@
+.request-line {
+  background-color: #ECEDEC;
+  padding: 50px 0;
+  text-align: center;
+  @media (max-width: 767.98px) {
+    padding: 25px 0;
+  }
+  &__link{
+    font-size: 21px;
+    line-height: 1;
+    text-align: center;
+    color: #4C4D4F;
+    transition: all 0.2s ease-in-out;
+    @media (max-width: 767.98px) {
+      font-size: 18px;
+    }
+    svg{
+      margin-left: 13px;
+      vertical-align: inherit;
+      transition: all 0.2s ease-in-out;
+    }
+    &:hover{
+      color: #4C4D4F;
+      text-decoration: none;
+      opacity: .8;
+      svg{
+        transform: translateX(7px);
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
